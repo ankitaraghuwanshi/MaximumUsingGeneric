@@ -21,7 +21,11 @@ namespace FindMaxNumber
             double maximumDouble = FindMax.MaximumFloat(12.1, 24.2, 48.3);
             Console.WriteLine("maximum number is " + maximumDouble);
 
-
+            string firststring = "apple";
+            string secondstring = "banana";
+            string thirdstring = "peach";
+            string maxstring = FindMax.MaximumString("apple", "banana", "peach");
+            Console.WriteLine("maximum string is " + maxstring);
         }
 
     }

@@ -36,5 +36,18 @@ namespace FindMaxNumber
             }
             return maximum;
         }
+        public static string MaximumString(string firstString, string secondString, string thirdString)
+        {
+            string maximum = firstString;
+            if (secondString.CompareTo(maximum) > 0)
+            {
+                maximum = secondString;
+            }
+            if (thirdString.CompareTo(maximum) > 0)
+            {
+                maximum = thirdString;
+            }
+            return maximum;
+        }
     }
 }
