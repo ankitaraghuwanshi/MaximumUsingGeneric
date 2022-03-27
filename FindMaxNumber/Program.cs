@@ -1,33 +1,28 @@
-﻿using System;
+﻿
 
-namespace FindMaximumNumber
+using System;
+using System.Collections.Generic;
+namespace FindMaxNumber
 {
     internal class Program
     {
-       public static void Main(string[] args)
+        public static void Main(string[] args)
         {
             int numOne = 50;
             int numTwo = 100;
             int numThree = 25;
 
-            int maxnum = GetMaximum(numOne, numTwo, numThree);
-            Console.WriteLine(maxnum);
+            int maxnumber = FindMax.Maximuminteger( numOne, numTwo, numThree);
+
+            double num_1 = 12.1;
+            double num_2 = 24.2;
+            double num_3 = 48.3;
+
+            double maximumDouble = FindMax.MaximumFloat(12.1, 24.2, 48.3);
+            Console.WriteLine("maximum number is " + maximumDouble);
+
 
         }
-        public static int GetMaximum(int numOne, int numTwo, int numThree)
-        {
-            int maximum = numOne;
-            if (numTwo.CompareTo(maximum) > 0)
-            {
-                maximum = numTwo;
-                Console.WriteLine("maximum number is " + numTwo);
-            }
-            if (numThree.CompareTo(maximum) > 0)
-            {
-                maximum = numThree;
-                Console.WriteLine("maximum number is " + numThree);
-            }
-            return maximum;
-        }
+
     }
 }
