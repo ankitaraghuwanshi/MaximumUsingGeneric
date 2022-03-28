@@ -6,48 +6,33 @@ using System.Threading.Tasks;
 
 namespace FindMaxNumber
 {
-    internal class FindMax
+    public class Generic<T> where T : IComparable
     {
-        public static int Maximuminteger(int numOne, int numTwo, int numThree)
+        public T[] arrayValue;
+
+        public Generic(T[] array)
         {
-            int maximum = numOne;
-            if (numTwo.CompareTo(maximum) > 0)
-            {
-                maximum = numTwo;
-                Console.WriteLine("maximum number is " + numTwo);
-            }
-            if (numThree.CompareTo(maximum) > 0)
-            {
-                maximum = numThree;
-                Console.WriteLine("maximum number is " + numThree);
-            }
+            this.arrayValue = array;
+        }
+        public T[] Sort(T[] array)
+        {
+            Array.Sort(array);
+            return array;
+        }
+        public T maxarray(T[] array)
+        {
+            var sortedValue = Sort(array);
+            return sortedValue[^1];
+        }
+        public T FindMaxNum()
+        {
+            var maximum = maxarray(arrayValue);
             return maximum;
         }
-        public static double MaximumFloat(double numOne, double numTwo, double numThree)
+        public void print()//uc-5
         {
-            double maximum = numOne;
-            if (numTwo.CompareTo(maximum) > 0)
-            {
-                maximum = numTwo;
-            }
-            if (numThree.CompareTo(maximum) > 0)
-            {
-                maximum = numThree;
-            }
-            return maximum;
-        }
-        public static string MaximumString(string firstString, string secondString, string thirdString)
-        {
-            string maximum = firstString;
-            if (secondString.CompareTo(maximum) > 0)
-            {
-                maximum = secondString;
-            }
-            if (thirdString.CompareTo(maximum) > 0)
-            {
-                maximum = thirdString;
-            }
-            return maximum;
+            var maximum = maxarray(arrayValue);
+            Console.WriteLine("Maximum is = " + maximum);
         }
     }
 }

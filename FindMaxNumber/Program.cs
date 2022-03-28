@@ -4,29 +4,24 @@ using System;
 using System.Collections.Generic;
 namespace FindMaxNumber
 {
-    internal class Program
+    public class Program
     {
         public static void Main(string[] args)
-        {
-            int numOne = 50;
-            int numTwo = 100;
-            int numThree = 25;
+        { 
+                int[] intArray = { 12, 24, 48,100,176 };
+                double[] doubleArray = { 99.9f, 122.3f, 33.44f, 65.4f };
+                string[] stringArray = { "Apple", "Peach", "Banana", "mango", "watermelon", "pineapple" };
 
-            int maxnumber = FindMax.Maximuminteger( numOne, numTwo, numThree);
+               Generic<int> intValue = new Generic<int>(intArray);
+                Console.WriteLine(intValue.FindMaxNum());
+               
+            Generic<double> doubleValue = new Generic<double>(doubleArray);
+                Console.WriteLine(doubleValue.FindMaxNum());
+              
+            Generic<string> stringValue = new Generic<string>(stringArray);
+                Console.WriteLine(stringValue.FindMaxNum());
+            
 
-            double num_1 = 12.1;
-            double num_2 = 24.2;
-            double num_3 = 48.3;
-
-            double maximumDouble = FindMax.MaximumFloat(12.1, 24.2, 48.3);
-            Console.WriteLine("maximum number is " + maximumDouble);
-
-            string firststring = "apple";
-            string secondstring = "banana";
-            string thirdstring = "peach";
-            string maxstring = FindMax.MaximumString("apple", "banana", "peach");
-            Console.WriteLine("maximum string is " + maxstring);
         }
-
     }
 }
