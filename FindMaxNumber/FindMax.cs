@@ -29,10 +29,6 @@ namespace FindMaxNumber
             var maximum = maxarray(arrayValue);
             return maximum;
         }
-        public void print()//uc-5
-        {
-            var maximum = maxarray(arrayValue);
-            Console.WriteLine("Maximum is = " + maximum);
-        }
+       
     }
 }
